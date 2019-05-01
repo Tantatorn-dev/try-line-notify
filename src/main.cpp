@@ -1,10 +1,8 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
-#include <WiFiClientSecureAxTLS.h>
+#include "LineNotify.h"
 
-const String TOKEN = "XZIMn5ABsJ9GrXkftMfLFiRPMFqCKNmau0CH7WDMiCk";
-
-void Line_Notify(String);
+const String TOKEN = "vOhcPRrN8mnO7urMx5vxLy2NyZEb8NwyIQy2hYacBDb";
 
 void setup() {
   // put your setup code here, to run once:
@@ -27,7 +25,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Line_Notify("hello");
+  sendMessage(TOKEN,"Hello");
   delay(5000);
 }
 
